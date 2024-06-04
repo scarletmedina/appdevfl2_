@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta here -->
+ 
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>appdev-fl2 (Final Exam)</title>
+  </head>
+  <body style="background-color: skyblue;">
+   
+    <section class="navbar sticky top-1;"></section>
+    <body class="bg-blue-500">
+      <nav class="p-5 bg-blue shadow md:flex md:items-center md:justify-between">
+          <div class="flex justify-between items-center">
+              <a href="index.html" class="text-2xl font-[Popp] cursor-pointer">
+                  <img src="images/image-removebg-preview.png" class="h-10 inline" alt="" width="70" height="90">
+              </a>
+              <span class="text-3xl cursor-pointer md:hidden mx-2 block">
+                  <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+              </span>
+          </div>
+          <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-0 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+              <li class="mx-4 my-6 md:my-0">
+                  <a href="#" class="text-xl hover:text-blue-500 duration-500">Home</a>
+              </li>
+              <li class="mx-4 my-6 md:my-0">
+                  <a href="#" class="text-xl hover:text-blue-500 duration-500">Download</a>
+              </li>
+              <li class="mx-4 my-6 md:my-0">
+                  <a href="#" class="text-xl hover:text-blue-500 duration-500">Services</a>
+              </li>
+              <li class="mx-4 my-6 md:my-0">
+                  <a href="#" class="text-xl hover:text-blue-500 duration-500">Abouts</a>
+              </li>
+              <li class="mx-4 my-6 md:my-0">
+                  <a href="#" class="text-xl hover:text-blue-500 duration-500">Contact</a>
+              </li>
+          </ul>
+      </nav>
+      <script>
+          function Menu(e) {
+              let list = document.querySelector('ul');
+              e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
+          }
+      </script>
+  </body>
+    </section>
+    <!-- Hero Section -->
+ 
+<section class="navbar sticky top-0;"></section>
+<div class="max-w-5lg mx-auto">
+    <div id="default-carousel" class="relative" data-carousel="static">
+        <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl ">Primer Slide</span>
+                <img src="https://media.assettype.com/analyticsinsight%2Fimport%2Fwp-content%2Fuploads%2F2022%2F01%2FGlobal-Entertainment-Industry.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+            </div>
+           
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://bschool.pepperdine.edu/blog/images/entertainment-trends-large.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+            </div>
+           
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://media.graphassets.com/resize=fit:crop,width:940,height:485/s7gRMoSwGuhOOkGR77dA" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+            </div>
+        </div>
+       
+       
+        <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        </div>
+       
+        <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
+                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <span class="hidden">Anterior</span>
+            </span>
+        </button>
+        <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 0 group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
+                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                <span class="hidden">Siguiente</span>
+            </span>
+        </button>
+    </div>
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+</div>
+    <section id="hero">
+      <section class="navbar sticky top-0;"></section>
+      <div class="pt-16 mb-40 section-container">
+        <img src="https://undergradcareers.nd.edu/assets/392224/1200x/camera.jpg" alt="" width="1100" height="900" />
+        <div class="hidden sm:ml-6 sm:block">
+ 
+        <p style="font-size:22px; font-style: oblique; color:blue"><b>WELCOME TO ENTERTAINMENT INDUSTRY</b></p>
+        <p style="text-align: center; font-size: 19px; color:black">
+          <i>The entertainment industry is driven by consumer demand for entertainment products and services. It is influenced by trends in technology, social media and consumer behavior. </i>
+        </p>
+ 
+    </section>
+ 
+ 
+    <!-- Features Section -->
+    <section id="features">
+      <section class="navbar sticky top-0;"></section>
+      <div class="my-20 section-container">
+        <div class="relative flex flex-col md:flex-row md:space-x-32">
+          <!-- Image -->
+          <div class="md:w-1/2">
+            <img
+              src="https://applications-media.feverup.com/image/upload/f_auto,w_550,h_550/fever2/plan/photo/e9f1aca6-dc9a-11ee-a0bb-0a31eca9d678.jpg" class="scale-90" width="500" height="200"
+              alt=""
+              class="md:absolute top-0 right-[50%]"
+            />
+          </div>
+ 
+ 
+          <!-- Items Container -->
+          <div
+            class="flex flex-col mt-16 mb-24 space-y-12 text-xl md:w-1/2 md:mb-60 md:text-left md:pl-26"
+          >
+            <!-- Item 1 -->
+            <div>
+              <p style="color:blue; font-size: 29px;"><b>Stranger Things</b></p>
+              <p style="font-size: 22px; color: #000;" >
+                <i>The idea for Stranger Things began when the brothers thought they could take the idea from the 2013 film Prisoners, which details the moral struggles a father goes through when his daughter is kidnapped, and expand it into an eight-hour television series.</i></section>
+              
+
+            </div>
+           <br>
+               
+    <section id="features">
+      <div class="my-20 section-container">
+        <div class="relative flex flex-col md:flex-row md:space-x-30">
+          <!-- Image -->
+          <div class="md:w-1/8">
+            <img
+              src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-4150,resizemode-75,msid-103540103/news/international/us/the-nun-2-where-will-the-horror-film-be-streaming-after-its-theater-run-details-inside.jpg"  width="400" height="300"
+              alt=""
+              class="md:absolute top-0 left-[50%]"
+            />
+          </div>
+ 
+          <div
+          class="flex flex-col mt-16 mb-24 space-y-12 text-xl md:w-1/2 md:mb-60 md:text-left md:pl-26"
+          >
+            <!-- Item 1 -->
+            <div>
+              <p style="color:blue; font-size: 29px;"><b>The Nun II</b></p>
+              <p style="font-size: 22px; text-align: left 17px; color: #000;">
+          <i>The Nun Chapter Two,<br> film directed by Michael Chaves. Screenplay<br> writers Ian Goldberg, Richard Naing,<br> and Akela Cooper wrote the film from a story<br> by Cooper.The Nun II is the eighth film in<br>The Conjuring Universe franchise and a sequel<br> toThe Nun (2018).</i></p>
+            </div>
+            <div class="col-6 left-20">
+      </div>
+    </section>
+ 
+    <!-- table -->
+      <table>
+        <tr>
+         
+            <td><img src="images/a.png" width="500" height="300"
+                alt="" /></td>
+             
+            <td><img src="images/s.png" width="500" height="300"
+              alt="" /></td>
+           
+            <td><img src="images/tn.png"  width="500" height="300"
+                alt="" /></td>
+        </tr>
+    </table>
+<br>
+<br>
+   
+        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51597403.751086436!2d-125.81625179727827!3d37.877704795995655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sph!4v1717255128536!5m2!1sen!2sph"  width="900" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" pad></iframe></p>
+      </div>
+    </section>
+ 
+    <footer class style="background-color: black;">
+      <div class="section-container">
+        <div class="flex flex-col items-center justify-between md:flex-row">
+          <!-- Image -->
+          <!-- Container for Menus & Social -->
+          <div
+            class="flex flex-col items-center justify-between flex-1 mb-10 space-y-6 md:flex-row md:mb-0 md:space-y-0 text-grayishBlue"
+          >
+            <!-- Menus -->
+            <div
+              class="flex flex-col space-y-4 md:flex-row md:ml-24 md:space-x-24 md:space-y-0"
+            >
+              <!-- Menu 1 -->
+              <div class="flex flex-col space-y-5 text-center md:text-left">
+                <div><a href="#" class="hover:text-strongCyan" style="color: white;">FAQs</a></div>
+                <div>
+                  <a href="#" class="hover:text-strongCyan" style="color: white;">Contact Us</a>
+                </div>
+              </div>
+              <!-- Menu 2 -->
+              <div class="flex flex-col space-y-4 text-center md:text-left">
+                <div>
+                  <a href="#" class="hover:text-strongCyan"style="color: white;">Privacy Policy</a>
+                </div>
+                <div>
+                  <a href="#" class="hover:text-strongCyan" style="color: white;">Press Kit</a>
+                </div>
+              </div>
+              <!-- Menu 3 -->
+              <div class="flex flex-col space-y-4 text-center md:text-left">
+                <div>
+                  <a href="#" class="hover:text-strongCyan"style="color: white;">Install Guide</a>
+                </div>
+              </div>
+            </div>
+ 
+            <!-- Social Icons -->
+            <div class="flex justify-between w-11 py-1">
+              <a href="#"
+                ><img
+                  src= "images/fb.png"
+                  alt=""
+                  class="duration-200 ficon"
+              /></a>
+              <a href="#"
+                ><img
+                  src="images/ig.png"
+                  alt=""
+                  class="duration-200 ficon"
+              /></a>
+              <a href="#"
+                ><img
+                  src= "images/google.png"
+                  alt=""
+                  class="duration-200 ficon"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+ 
